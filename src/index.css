@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RishabhOS Design System - macOS Inspired */
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 220 20% 98%;
+    --foreground: 220 30% 12%;
+
+    /* Surface Colors */
+    --card: 220 20% 98%;
+    --card-foreground: 220 30% 12%;
+    --popover: 220 25% 96%;
+    --popover-foreground: 220 30% 12%;
+
+    /* Brand Colors */
+    --primary: 239 84% 67%;
+    --primary-foreground: 220 20% 98%;
+    --primary-glow: 239 84% 75%;
+
+    /* UI Colors */
+    --secondary: 220 20% 94%;
+    --secondary-foreground: 220 30% 20%;
+    --muted: 220 15% 90%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 280 65% 65%;
+    --accent-foreground: 220 20% 98%;
+
+    /* Status Colors */
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 220 20% 98%;
+    --success: 140 65% 55%;
+    --warning: 45 85% 65%;
+
+    /* Border & Input */
+    --border: 220 15% 85%;
+    --input: 220 15% 88%;
+    --ring: 239 84% 67%;
+
+    /* macOS Specific */
+    --glass-bg: 220 25% 96%;
+    --glass-border: 220 15% 80%;
+    --dock-bg: 220 30% 15%;
+    --window-bg: 220 20% 98%;
+    --window-border: 220 15% 85%;
+    --titlebar-bg: 220 15% 92%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(239 84% 67%), hsl(280 65% 65%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 25% 98%), hsl(220 20% 95%));
+    --gradient-glass: linear-gradient(135deg, 
+      hsl(220 25% 96% / 0.8), 
+      hsl(220 20% 94% / 0.6));
+
+    /* Shadows */
+    --shadow-window: 0 25px 50px -12px hsl(220 30% 15% / 0.25);
+    --shadow-app: 0 10px 25px -5px hsl(220 30% 15% / 0.1);
+    --shadow-dock: 0 -10px 30px -5px hsl(220 30% 15% / 0.3);
+    --shadow-glow: 0 0 40px hsl(239 84% 67% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base Colors */
+    --background: 220 25% 8%;
+    --foreground: 220 20% 92%;
+
+    /* Surface Colors */
+    --card: 220 25% 10%;
+    --card-foreground: 220 20% 92%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 20% 92%;
+
+    /* Brand Colors */
+    --primary: 239 84% 67%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 239 84% 75%;
+
+    /* UI Colors */
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 220 20% 85%;
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 280 65% 65%;
+    --accent-foreground: 220 25% 8%;
+
+    /* Status Colors */
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 220 25% 8%;
+    --success: 140 65% 55%;
+    --warning: 45 85% 65%;
+
+    /* Border & Input */
+    --border: 220 20% 25%;
+    --input: 220 20% 22%;
+    --ring: 239 84% 67%;
+
+    /* macOS Specific Dark */
+    --glass-bg: 220 25% 12%;
+    --glass-border: 220 20% 30%;
+    --dock-bg: 220 30% 12%;
+    --window-bg: 220 25% 10%;
+    --window-border: 220 20% 25%;
+    --titlebar-bg: 220 25% 15%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(239 84% 67%), hsl(280 65% 65%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 25% 12%), hsl(220 25% 8%));
+    --gradient-glass: linear-gradient(135deg, 
+      hsl(220 25% 12% / 0.8), 
+      hsl(220 25% 10% / 0.6));
+
+    /* Dark Shadows */
+    --shadow-window: 0 25px 50px -12px hsl(220 30% 5% / 0.6);
+    --shadow-app: 0 10px 25px -5px hsl(220 30% 5% / 0.4);
+    --shadow-dock: 0 -10px 30px -5px hsl(220 30% 5% / 0.7);
+    --shadow-glow: 0 0 40px hsl(239 84% 67% / 0.4);
+
+    /* Sidebar dark overrides */
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 220 20% 92%;
+    --sidebar-primary: 239 84% 67%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 220 20% 85%;
+    --sidebar-border: 220 20% 25%;
+    --sidebar-ring: 239 84% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-surface);
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Window Components */
+  .window {
+    @apply rounded-xl border border-window-border bg-window-bg backdrop-blur-sm;
+    box-shadow: var(--shadow-window);
+  }
+
+  .titlebar {
+    @apply bg-titlebar-bg border-b border-window-border rounded-t-xl;
+    @apply flex items-center justify-between px-4 py-2.5;
+  }
+
+  .traffic-lights {
+    @apply flex items-center gap-2;
+  }
+
+  .traffic-light {
+    @apply w-3 h-3 rounded-full cursor-pointer transition-all duration-200;
+    @apply hover:scale-110;
+  }
+
+  .traffic-light.close {
+    @apply bg-red-500 hover:bg-red-600;
+  }
+
+  .traffic-light.minimize {
+    @apply bg-yellow-500 hover:bg-yellow-600;
+  }
+
+  .traffic-light.maximize {
+    @apply bg-green-500 hover:bg-green-600;
+  }
+
+  /* Dock */
+  .dock {
+    @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50;
+    @apply flex items-center justify-center gap-2 p-3 rounded-2xl backdrop-blur-xl;
+    background: hsl(var(--dock-bg) / 0.8);
+    border: 1px solid hsl(var(--glass-border) / 0.3);
+    box-shadow: var(--shadow-dock);
+    width: fit-content;
+  }
+
+  .dock-icon {
+    @apply w-14 h-14 rounded-xl cursor-pointer transition-all duration-300;
+    @apply hover:scale-125 hover:-translate-y-2;
+    @apply flex items-center justify-center;
+    background: var(--gradient-glass);
+    border: 1px solid hsl(var(--glass-border) / 0.5);
+  }
+
+  /* Glass effect */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border) / 0.3);
+  }
+
+  /* Terminal */
+  .terminal {
+    @apply bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm;
+    background: linear-gradient(135deg, #1a1a1a, #0d1117);
+  }
+
+  .terminal-prompt::before {
+    content: "➜ ";
+    @apply text-primary;
+  }
+
+  /* Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .window-enter {
+    animation: windowEnter 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .window-exit {
+    animation: windowExit 0.2s ease-in;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .bg-window {
+    background: hsl(var(--window-bg));
+  }
+
+  .bg-titlebar {
+    background: hsl(var(--titlebar-bg));
+  }
+
+  .border-window {
+    border-color: hsl(var(--window-border));
+  }
+
+  .bg-glass {
+    background: hsl(var(--glass-bg));
+  }
+
+  .border-glass {
+    border-color: hsl(var(--glass-border));
+  }
+
+  .shadow-window {
+    box-shadow: var(--shadow-window);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from { box-shadow: var(--shadow-glow); }
+  to { box-shadow: 0 0 60px hsl(var(--primary) / 0.5); }
+}
+
+@keyframes windowEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes windowExit {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
